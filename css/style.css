@@ -1,8 +1,15 @@
+/* ===== SIVUSTON VÄRIT ===== */
+:root {
+    --tausta: #F0EAD6;       /* sivun taustaväri */
+    --tumma: #343148;        /* navigaatio ja footer */
+    --korostus: #FE840E;     /* painikkeet ja korostukset */ 
+}
+
 /* Yleiset tyylit: fontti ja leipätekstin koko */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    background-color: #F0EAD6;
+    font-size: 16px;
+    background-color: var(--tausta);
 }
 
 /* Otsikko 1: 20-24px */
@@ -13,4 +20,87 @@ h1 {
 /* Otsikko 2 ja muut otsikot: 14-16px */
 h2, h3, h4, h5, h6 {
     font-size: 16px;
+}
+/* ===== VÄRIEN TESTAUS ===== */
+
+/* Paletti: 8 nappia rivissä, eli 16 väriä kahdessa rivissä */
+.paletti {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+/* Yksittäinen värinappi */
+.varinappi {
+    height: 35px;
+    border: 2px solid var(--tausta);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid var(--tumma);
+    transition: transform 0.4s;
+}
+
+/* Nappi suurenee hieman, kun hiiri on päällä */
+.varinappi:hover {
+    transform: scale(1.1);
+}
+
+/* Ulompi laatikko: reunaviiva ja pyöreät kulmat */
+.pinnat {
+    display: flex;
+    height: 250px;
+    border: 2px solid var(--tumma);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+/* Pinnat laatikon sisällä: kumpikin vie puolet leveydestä */
+.pinta {
+    flex: 1;
+    background-color: var(--tausta);
+}
+
+/* Nimet pintojen alla, kumpikin oman puolensa kohdalla */
+.nimet {
+    display: flex;
+}
+
+.nimet p {
+    flex: 1;
+}
+/* Navigaatiopalkin ja footerin taustaväri */
+.navbar, footer {
+    background-color: var(--tumma);
+}
+/* ===== NAVIGAATIOPALKKI ===== */
+
+/* Yrityksen nimi vasemmalla */
+.navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Valikon linkit */
+.navbar .nav-link {
+    font-size: 16px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+/* Linkki, kun hiiri on sen päällä */
+.navbar .nav-link:hover {
+    transform: scale(1.1);
+}
+
+/* Linkki sille sivulle, jolla ollaan */
+.navbar .nav-link.active {
+    font-weight: bold;
+    font-size: 19px;
+}
+/* Valikon linkit samalle linjalle, vaikka tekstikoot ovat eri */
+.navbar .navbar-nav {
+    align-items: center;
 }

@@ -17,7 +17,7 @@
 <body>
 
     <!-- ===== Navigaatiop palkki ===== -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-brush"></i> Kotkantien maalaus
@@ -39,13 +39,42 @@
     </nav>
 
     <!-- ===== SISÄLTÖ ===== -->
-    <main class="container my-5">
-        <h1>Värien testaus</h1>
-        <p>Tähän tulee värien testaussisältö myöhemmin.</p>
-    </main>
+<main class="container my-5">
+    <h1><i class="bi bi-palette"></i> Värien testaus</h1>
+    <p>Valitse väri kummastakin paletista ja katso, miten värit sopivat yhteen.</p>
+
+    <!-- Paletit vierekkäin -->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <h2>Vasen puoli</h2>
+            <div id="paletti1" class="paletti"></div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <h2>Oikea puoli</h2>
+            <div id="paletti2" class="paletti"></div>
+        </div>
+    </div>
+
+    <!-- Yksi yhteinen suorakulmio, jonka sisällä on kaksi pintaa -->
+    <div class="pinnat">
+        <div id="pinta1" class="pinta"></div>
+        <div id="pinta2" class="pinta"></div>
+    </div>
+
+    <!-- Valittujen värien nimet pintojen alla -->
+    <div class="nimet">
+        <p id="nimi1">Ei valittua väriä</p>
+        <p id="nimi2">Ei valittua väriä</p>
+    </div>
+
+    <!-- Painike, joka tyhjentää molemmat pinnat -->
+    <button id="tyhjenna" class="btn btn-dark">
+        <i class="bi bi-eraser"></i> Tyhjennä värit
+    </button>
+</main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-dark text-light text-center py-3">
+    <footer class=" text-light text-center py-3">
         <p class="mb-0">&copy; 2026 Kotkantien maalaus ja tapetointi</p>
     </footer>
 
@@ -55,5 +84,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Oma JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/varit.js"></script>
 </body>
 </html>
