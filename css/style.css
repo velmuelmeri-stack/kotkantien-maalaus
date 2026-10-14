@@ -1,0 +1,16 @@
+/* Yleiset tyylit: fontti ja leipätekstin koko */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #F0EAD6;
+}
+
+/* Otsikko 1: 20-24px */
+h1 {
+    font-size: 24px;
+}
+
+/* Otsikko 2 ja muut otsikot: 14-16px */
+h2, h3, h4, h5, h6 {
+    font-size: 16px;
+}
