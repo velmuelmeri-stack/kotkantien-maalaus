@@ -8,7 +8,7 @@
 /* Yleiset tyylit: fontti ja leipätekstin koko */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     background-color: var(--tausta);
 }
 
@@ -34,7 +34,7 @@ h2, h3, h4, h5, h6 {
 /* Yksittäinen värinappi */
 .varinappi {
     height: 35px;
-    border: 2px solid var(--tausta);
+
     border-radius: 5px;
     cursor: pointer;
     border: 1px solid var(--tumma);
@@ -59,7 +59,7 @@ h2, h3, h4, h5, h6 {
 /* Pinnat laatikon sisällä: kumpikin vie puolet leveydestä */
 .pinta {
     flex: 1;
-    background-color: var(--tausta);
+    background-color: white;
 }
 
 /* Nimet pintojen alla, kumpikin oman puolensa kohdalla */
@@ -98,9 +98,71 @@ h2, h3, h4, h5, h6 {
 /* Linkki sille sivulle, jolla ollaan */
 .navbar .nav-link.active {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 16px;
 }
 /* Valikon linkit samalle linjalle, vaikka tekstikoot ovat eri */
 .navbar .navbar-nav {
     align-items: center;
+}
+/* ===== YHTEYSTIEDOT ===== */
+
+/* Valkoinen laatikko yhteystiedoille ja lomakkeelle */
+.laatikko {
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    height: 100%;
+}
+
+/* Isot some-ikonit */
+.some-ikoni {
+    font-size: 28px;
+    color: var(--tumma);
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.some-ikoni:hover {
+    color: var(--korostus);
+}
+
+/* Kartta koko leveydeltä */
+.kartta iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
+}
+/* Yksi yhteystietorivi: ikoni ja teksti vierekkäin */
+.yhteystieto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+/* Pyöreä tausta ikonille */
+.ikoniympyra {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--tumma);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Puhelin- ja sähköpostilinkit */
+.yhteystieto a {
+    color: var(--tumma);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.yhteystieto a:hover {
+    color: var(--korostus);
 }

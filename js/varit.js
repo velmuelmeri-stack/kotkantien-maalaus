@@ -61,8 +61,8 @@ $(document).ready(function () {
 
     // Tyhjennä-painike palauttaa pinnat valkoisiksi
     $("#tyhjenna").click(function () {
-        $("#pinta1").css("background-color", "white");
-        $("#pinta2").css("background-color", "white");
+        $("#pinta1").css("background-color", "");
+        $("#pinta2").css("background-color", "");
         $("#nimi1").text("Ei valittua väriä");
         $("#nimi2").text("Ei valittua väriä");
     });
