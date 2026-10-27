@@ -40,9 +40,61 @@
 
     <!-- ===== SISÄLTÖ ===== -->
     <main class="container my-5">
-        <h1>Galleria</h1>
-        <p>Tähän tulee gallerian sisältö myöhemmin.</p>
+        <h1><i class="bi bi-images"></i> Galleria</h1>
+        <p>Kuvia töistämme. Klikkaa kuvaa nähdäksesi sen isompana.</p>
+
+        <!-- Kuvaruudukko -->
+        <div class="row">
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/deeezy-room-4898511_1920.jpg" alt="Vaalea huone" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/flutie8211-floral-wallpaper-7649878_1920.jpg" alt="Kukkatapetti" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/vinnyciro-living-room-581073_1920.jpg" alt="Olohuone" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/darkmoon_art-template-2789709_1920.jpg" alt="KIRJOITA KUVAUS" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/decorativeworld-floral-background-6977406_1920.png" alt="Kukkakuvioinen tapetti" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/deeezy-room-4898514_1920.jpg" alt="Sisustettu huone" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/flutie8211-room-7174968_1920.jpg" alt="Huone tapetoidulla seinällä" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="img/qimono-door-1756962_1920.jpg" alt="Maalattu ovi" class="galleriakuva"
+                     data-bs-toggle="modal" data-bs-target="#kuvaModal">
+            </div>
+        </div>
     </main>
+
+<!-- ===== ISO KUVA (MODAL) ===== -->
+<!-- Piilossa, kunnes jotain kuvaa klikataan -->
+<div class="modal fade" id="kuvaModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p id="kuvaTeksti" class="mb-0"></p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0">
+                <img id="isoKuva" src="" alt="" class="w-100">
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- ===== FOOTER ===== -->
     <footer class=" text-light text-center py-3">
@@ -51,9 +103,10 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap JS (tarvitaan esim. mobiilivalikkoon) -->
+    <!-- Bootstrap JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Oma JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/galleria.js"></script>
 </body>
 </html>

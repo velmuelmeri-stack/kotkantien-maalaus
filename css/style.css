@@ -166,3 +166,34 @@ h2, h3, h4, h5, h6 {
 .yhteystieto a:hover {
     color: var(--korostus);
 }
+/* ===== GALLERIA ===== */
+
+/* Galleriakuvat: kaikki samankokoisia */
+.galleriakuva {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Kuva suurenee hieman, kun hiiri on päällä */
+.galleriakuva:hover {
+    transform: scale(1.03);
+}
+
+/* Suodatinpainikkeet */
+.suodatin {
+    background-color: white;
+    color: var(--tumma);
+    border: 1px solid var(--tumma);
+    margin-right: 5px;
+}
+
+/* Valittu suodatin ja hiiren alla oleva suodatin */
+.suodatin:hover,
+.suodatin.aktiivinen {
+    background-color: var(--tumma);
+    color: white;
+}
