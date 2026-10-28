@@ -197,3 +197,47 @@ h2, h3, h4, h5, h6 {
     background-color: var(--tumma);
     color: white;
 }
+/* ===== PALVELUT ===== */
+
+/* Palvelukortti: ei reunaviivaa, pyöreät kulmat ja kevyt varjo */
+.palvelukortti {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Kortin kuva: kaikki samankokoisia */
+.palvelukortti img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Palvelulista ilman listapalloja */
+.palvelulista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.palvelulista li {
+    margin-bottom: 6px;
+}
+
+/* Listan ikonit korostusvärillä */
+.palvelulista i {
+    color: var(--korostus);
+    margin-right: 6px;
+}
+
+/* Isot ikonit "Miksi valita meidät" -laatikoissa */
+.etu-ikoni {
+    font-size: 36px;
+    color: var(--korostus);
+}
+
+/* Video pyöreillä kulmilla */
+.video {
+    border-radius: 8px;
+    overflow: hidden;
+}
