@@ -17,7 +17,7 @@
 <body>
 
     <!-- ===== NAVIGAATIOPALKKI ===== -->
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-brush"></i> Kotkantien maalaus
@@ -39,109 +39,113 @@
     </nav>
 
     <!-- ===== SISÄLTÖ ===== -->
-<main class="container my-5">
-    <h1><i class="bi bi-envelope"></i> Yhteystiedot</h1>
-    <p>Kysy rohkeasti lisää tai pyydä ilmainen tarjous!</p>
+    <main class="container my-5">
+        <h1><i class="bi bi-envelope"></i> Yhteystiedot</h1>
+        <p>Kysy rohkeasti lisää tai pyydä ilmainen tarjous!</p>
 
-    <div class="row">
+        <div class="row">
 
-        <!-- ===== VASEN PUOLI: YHTEYSTIEDOT ===== -->
-        <div class="col-lg-5 mb-4">
-            <div class="laatikko">
-                <h2>Ota yhteyttä</h2>
+            <!-- ===== VASEN PUOLI: YHTEYSTIEDOT ===== -->
+            <div class="col-lg-5 mb-4">
+                <div class="laatikko">
+                    <h2>Ota yhteyttä</h2>
 
-                <p class="yhteystieto">
-                    <span class="ikoniympyra"><i class="bi bi-geo-alt"></i></span>
-                    Kotkantie 3, 90100 Oulu
-                </p>
-                <p class="yhteystieto">
-                    <span class="ikoniympyra"><i class="bi bi-telephone"></i></span>
-                    <a href="tel:04499988899">044 999 888 99</a>
-                </p>
-                <p class="yhteystieto">
-                    <span class="ikoniympyra"><i class="bi bi-envelope"></i></span>
-                    <a href="mailto:info@kotkantienmaalaus.fi">info@kotkantienmaalaus.fi</a>
-                </p>
-                <h2>Seuraa meitä</h2>
-                <!-- target="_blank" avaa linkin uuteen välilehteen -->
-                <a href="https://www.instagram.com/kotkantienmaalaus" target="_blank" class="some-ikoni">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@kotkantienmaalaus" target="_blank" class="some-ikoni">
-                    <i class="bi bi-youtube"></i>
-                </a>
+                    <p class="yhteystieto">
+                        <span class="ikoniympyra"><i class="bi bi-geo-alt"></i></span>
+                        Kotkantie 3, 90100 Oulu
+                    </p>
+                    <p class="yhteystieto">
+                        <span class="ikoniympyra"><i class="bi bi-telephone"></i></span>
+                        <a href="tel:04499988899">044 999 888 99</a>
+                    </p>
+                    <p class="yhteystieto">
+                        <span class="ikoniympyra"><i class="bi bi-envelope"></i></span>
+                        <a href="mailto:info@kotkantienmaalaus.fi">info@kotkantienmaalaus.fi</a>
+                    </p>
+
+                    <h2>Seuraa meitä</h2>
+                    <!-- target="_blank" avaa linkin uuteen välilehteen -->
+                    <a href="https://www.instagram.com/kotkantienmaalaus" target="_blank" class="some-ikoni">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@kotkantienmaalaus" target="_blank" class="some-ikoni">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- ===== OIKEA PUOLI: YHTEYDENOTTOLOMAKE ===== -->
-        <div class="col-lg-7 mb-4">
-            <div class="laatikko">
-                <h2>Lähetä viesti</h2>
+            <!-- ===== OIKEA PUOLI: YHTEYDENOTTOLOMAKE ===== -->
+            <div class="col-lg-7 mb-4">
+                <div class="laatikko">
+                    <h2>Lähetä viesti</h2>
 
-                <form id="lomake" novalidate>
-                    <!-- Nimi -->
-                    <div class="mb-3">
-                        <label for="nimi" class="form-label">Nimi *</label>
-                        <input type="text" id="nimi" class="form-control">
-                        <div class="invalid-feedback">Kirjoita nimesi.</div>
+                    <!-- novalidate: selaimen oma tarkistus pois, tarkistus tehdään lomake.js:ssä -->
+                    <form id="lomake" novalidate>
+                        <!-- Nimi -->
+                        <div class="mb-3">
+                            <label for="nimi" class="form-label">Nimi *</label>
+                            <input type="text" id="nimi" class="form-control">
+                            <div class="invalid-feedback">Kirjoita nimesi.</div>
+                        </div>
+
+                        <!-- Sähköposti -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Sähköposti *</label>
+                            <input type="email" id="email" class="form-control">
+                            <div class="invalid-feedback">Kirjoita toimiva sähköpostiosoite.</div>
+                        </div>
+
+                        <!-- Puhelin (vapaaehtoinen) -->
+                        <div class="mb-3">
+                            <label for="puhelin" class="form-label">Puhelin</label>
+                            <input type="tel" id="puhelin" class="form-control">
+                        </div>
+
+                        <!-- Valikko: mistä palvelusta ollaan kiinnostuneita -->
+                        <div class="mb-3">
+                            <label for="palvelu" class="form-label">Palvelu</label>
+                            <select id="palvelu" class="form-select">
+                                <option>Maalaus</option>
+                                <option>Tapetointi</option>
+                                <option>Maalaus ja tapetointi</option>
+                                <option>Muu</option>
+                            </select>
+                        </div>
+
+                        <!-- Viesti -->
+                        <div class="mb-3">
+                            <label for="viesti" class="form-label">Viesti *</label>
+                            <textarea id="viesti" class="form-control" rows="5"></textarea>
+                            <div class="invalid-feedback">Kirjoita viesti.</div>
+                        </div>
+
+                        <p>* pakollinen kenttä</p>
+
+                        <button type="submit" class="btn btn-korostus">
+                            <i class="bi bi-send"></i> Lähetä
+                        </button>
+                    </form>
+
+                    <!-- Kiitosviesti, piilossa kunnes lomake on lähetetty -->
+                    <div id="kiitos" class="alert alert-success" style="display: none;">
+                        <i class="bi bi-check-circle"></i>
+                        Kiitos viestistäsi, <span id="kiitosNimi"></span>! Otamme sinuun yhteyttä pian.
                     </div>
-
-                    <!-- Sähköposti -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Sähköposti *</label>
-                        <input type="email" id="email" class="form-control">
-                        <div class="invalid-feedback">Kirjoita toimiva sähköpostiosoite.</div>
-                    </div>
-
-                    <!-- Puhelin (vapaaehtoinen) -->
-                    <div class="mb-3">
-                        <label for="puhelin" class="form-label">Puhelin</label>
-                        <input type="tel" id="puhelin" class="form-control">
-                    </div>
-
-                    <!-- Valikko: mistä palvelusta ollaan kiinnostuneita -->
-                    <div class="mb-3">
-                        <label for="palvelu" class="form-label">Palvelu</label>
-                        <select id="palvelu" class="form-select">
-                            <option>Maalaus</option>
-                            <option>Tapetointi</option>
-                            <option>Maalaus ja tapetointi</option>
-                            <option>Muu</option>
-                        </select>
-                    </div>
-
-                    <!-- Viesti -->
-                    <div class="mb-3">
-                        <label for="viesti" class="form-label">Viesti *</label>
-                        <textarea id="viesti" class="form-control" rows="5"></textarea>
-                        <div class="invalid-feedback">Kirjoita viesti.</div>
-                    </div>
-
-                    <p>* pakollinen kenttä</p>
-
-                    <button type="submit" class="btn btn-dark">
-                        <i class="bi bi-send"></i> Lähetä
-                    </button>
-                </form>
-                <!-- Kiitosviesti, piilossa kunnes lomake on lähetetty -->
-                <div id="kiitos" class="alert alert-success" style="display: none;">
-                    <i class="bi bi-check-circle"></i>
-                    Kiitos viestistäsi, <span id="kiitosNimi"></span>! Otamme sinuun yhteyttä pian.
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- ===== GOOGLE MAPS -KARTTA ===== -->
-    <h2>Löydät meidät täältä</h2>
-    <div class="kartta">
-        <iframe src="https://maps.google.com/maps?q=Kotkantie%203,%2090100%20Oulu&output=embed"
-                loading="lazy"></iframe>
-    </div>
-</main>
+        <!-- ===== GOOGLE MAPS -KARTTA ===== -->
+        <h2>Löydät meidät täältä</h2>
+        <div class="kartta">
+            <iframe src="https://maps.google.com/maps?q=Kotkantie%203,%2090100%20Oulu&output=embed"
+                    title="Kartta: Kotkantie 3, Oulu"
+                    loading="lazy"></iframe>
+        </div>
+    </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class=" text-light text-center py-3">
+    <footer class="text-light text-center py-3">
         <p class="mb-0">&copy; 2026 Kotkantien maalaus ja tapetointi</p>
     </footer>
 

@@ -1,11 +1,15 @@
 /* ===== SIVUSTON VÄRIT ===== */
+/* Vaihda värit tästä, niin ne vaihtuvat koko sivustolla */
 :root {
     --tausta: #F0EAD6;       /* sivun taustaväri */
     --tumma: #343148;        /* navigaatio ja footer */
-    --korostus: #FE840E;     /* painikkeet ja korostukset */ 
+    --korostus: #FE840E;     /* painikkeet ja korostukset */
 }
 
-/* Yleiset tyylit: fontti ja leipätekstin koko */
+
+/* ===== YLEISET TYYLIT ===== */
+
+/* Fontti ja leipätekstin koko */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -21,60 +25,43 @@ h1 {
 h2, h3, h4, h5, h6 {
     font-size: 16px;
 }
-/* ===== VÄRIEN TESTAUS ===== */
 
-/* Paletti: 8 nappia rivissä, eli 16 väriä kahdessa rivissä */
-.paletti {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 5px;
-    margin-bottom: 10px;
-}
 
-/* Yksittäinen värinappi */
-.varinappi {
-    height: 35px;
+/* ===== YHTEISET OSAT (käytössä monella sivulla) ===== */
 
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid var(--tumma);
-    transition: transform 0.4s;
-}
-
-/* Nappi suurenee hieman, kun hiiri on päällä */
-.varinappi:hover {
-    transform: scale(1.1);
-}
-
-/* Ulompi laatikko: reunaviiva ja pyöreät kulmat */
-.pinnat {
-    display: flex;
-    height: 250px;
-    border: 2px solid var(--tumma);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-/* Pinnat laatikon sisällä: kumpikin vie puolet leveydestä */
-.pinta {
-    flex: 1;
+/* Valkoinen laatikko */
+.laatikko {
     background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    height: 100%;
 }
 
-/* Nimet pintojen alla, kumpikin oman puolensa kohdalla */
-.nimet {
-    display: flex;
+/* Isot ikonit laatikoissa */
+.etu-ikoni {
+    font-size: 36px;
+    color: var(--korostus);
 }
 
-.nimet p {
-    flex: 1;
+/* Oma painike sivuston korostusvärillä */
+.btn-korostus {
+    background-color: var(--korostus);
+    color: white;
+    border: none;
 }
-/* Navigaatiopalkin ja footerin taustaväri */
+
+.btn-korostus:hover {
+    background-color: var(--tumma);
+    color: white;
+}
+
+
+/* ===== NAVIGAATIOPALKKI JA FOOTER ===== */
+
+/* Taustaväri */
 .navbar, footer {
     background-color: var(--tumma);
 }
-/* ===== NAVIGAATIOPALKKI ===== */
 
 /* Yrityksen nimi vasemmalla */
 .navbar .navbar-brand {
@@ -90,7 +77,7 @@ h2, h3, h4, h5, h6 {
     transition: transform 0.3s;
 }
 
-/* Linkki, kun hiiri on sen päällä */
+/* Linkki suurenee hieman, kun hiiri on päällä */
 .navbar .nav-link:hover {
     transform: scale(1.1);
 }
@@ -98,105 +85,73 @@ h2, h3, h4, h5, h6 {
 /* Linkki sille sivulle, jolla ollaan */
 .navbar .nav-link.active {
     font-weight: bold;
-    font-size: 16px;
-}
-/* Valikon linkit samalle linjalle, vaikka tekstikoot ovat eri */
-.navbar .navbar-nav {
-    align-items: center;
-}
-/* ===== YHTEYSTIEDOT ===== */
-
-/* Valkoinen laatikko yhteystiedoille ja lomakkeelle */
-.laatikko {
-    background-color: white;
-    border-radius: 18px;
-    padding: 20px;
-    height: 100%;
 }
 
-/* Isot some-ikonit */
-.some-ikoni {
-    font-size: 28px;
-    color: var(--tumma);
-    margin-right: 15px;
-    transition: color 0.3s;
-}
 
-.some-ikoni:hover {
-    color: var(--korostus);
-}
+/* ===== ETUSIVU ===== */
 
-/* Kartta koko leveydeltä */
-.kartta iframe {
-    width: 100%;
-    height: 350px;
-    border: 0;
-    border-radius: 8px;
-}
-/* Yksi yhteystietorivi: ikoni ja teksti vierekkäin */
-.yhteystieto {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    letter-spacing: 0.3px;
-}
-
-/* Pyöreä tausta ikonille */
-.ikoniympyra {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--tumma);
-    color: white;
+/* Hero: iso taustakuva, jonka päällä tumma kerros tekstin luettavuuden takia */
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+        url("../img/giffywallsuk-wallpaper-8256261_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    text-align: center;
+    color: white;
+    padding: 20px;
 }
 
-/* Puhelin- ja sähköpostilinkit */
-.yhteystieto a {
-    color: var(--tumma);
+/* Hero-otsikko isoilla kirjaimilla */
+.hero h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Iskulause otsikon alla */
+.iskulause {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* Esittelyteksti: kapeampi, jotta se on helpompi lukea */
+.esittely {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Nostolinkit: ei alleviivausta, teksti normaalin värinen */
+.nosto {
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    color: inherit;
 }
 
-.yhteystieto a:hover {
-    color: var(--korostus);
-}
-/* ===== GALLERIA ===== */
-
-/* Galleriakuvat: kaikki samankokoisia */
-.galleriakuva {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s;
+/* Nostolaatikko nousee hieman ylös, kun hiiri on päällä */
+.nosto .laatikko {
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Kuva suurenee hieman, kun hiiri on päällä */
-.galleriakuva:hover {
-    transform: scale(1.03);
+.nosto:hover .laatikko {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Suodatinpainikkeet */
-.suodatin {
-    background-color: white;
-    color: var(--tumma);
-    border: 1px solid var(--tumma);
-    margin-right: 5px;
-}
-
-/* Valittu suodatin ja hiiren alla oleva suodatin */
-.suodatin:hover,
-.suodatin.aktiivinen {
+/* Yhteydenottokehotus tummalla taustalla */
+.kehotus {
     background-color: var(--tumma);
     color: white;
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin-top: 20px;
 }
+
+
 /* ===== PALVELUT ===== */
 
 /* Palvelukortti: ei reunaviivaa, pyöreät kulmat ja kevyt varjo */
@@ -230,14 +185,133 @@ h2, h3, h4, h5, h6 {
     margin-right: 6px;
 }
 
-/* Isot ikonit "Miksi valita meidät" -laatikoissa */
-.etu-ikoni {
-    font-size: 36px;
-    color: var(--korostus);
-}
-
 /* Video pyöreillä kulmilla */
 .video {
     border-radius: 8px;
     overflow: hidden;
+}
+
+
+/* ===== VÄRIEN TESTAUS ===== */
+
+/* Paletti: 8 nappia rivissä, eli 16 väriä kahdessa rivissä */
+.paletti {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+/* Yksittäinen värinappi */
+.varinappi {
+    height: 35px;
+    border: 1px solid var(--tumma);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+/* Nappi suurenee hieman, kun hiiri on päällä */
+.varinappi:hover {
+    transform: scale(1.1);
+}
+
+/* Ulompi laatikko: reunaviiva ja pyöreät kulmat */
+.pinnat {
+    display: flex;
+    height: 250px;
+    border: 2px solid var(--tumma);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+/* Pinnat laatikon sisällä: kumpikin vie puolet leveydestä */
+.pinta {
+    flex: 1;
+    background-color: white;
+}
+
+/* Nimet pintojen alla, kumpikin oman puolensa kohdalla */
+.nimet {
+    display: flex;
+}
+
+.nimet p {
+    flex: 1;
+}
+
+
+/* ===== GALLERIA ===== */
+
+/* Galleriakuvat: kaikki samankokoisia */
+.galleriakuva {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Kuva suurenee hieman, kun hiiri on päällä */
+.galleriakuva:hover {
+    transform: scale(1.03);
+}
+
+
+/* ===== YHTEYSTIEDOT ===== */
+
+/* Yksi yhteystietorivi: ikoni ja teksti vierekkäin */
+.yhteystieto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+/* Pyöreä tausta ikonille */
+.ikoniympyra {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--tumma);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Puhelin- ja sähköpostilinkit */
+.yhteystieto a {
+    color: var(--tumma);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.yhteystieto a:hover {
+    color: var(--korostus);
+}
+
+/* Isot some-ikonit */
+.some-ikoni {
+    font-size: 28px;
+    color: var(--tumma);
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.some-ikoni:hover {
+    color: var(--korostus);
+}
+
+/* Kartta koko leveydeltä */
+.kartta iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
 }

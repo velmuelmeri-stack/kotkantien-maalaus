@@ -59,7 +59,9 @@ $(document).ready(function () {
     teePaletti("#paletti1", "#pinta1", "#nimi1");
     teePaletti("#paletti2", "#pinta2", "#nimi2");
 
-    // Tyhjennä-painike palauttaa pinnat valkoisiksi
+    // Tyhjennä-painike palauttaa pinnat alkuperäiseen väriin.
+    // Tyhjä arvo "" poistaa JavaScriptin asettaman värin,
+    // jolloin käytetään style.css:ssä määritettyä väriä.
     $("#tyhjenna").click(function () {
         $("#pinta1").css("background-color", "");
         $("#pinta2").css("background-color", "");
