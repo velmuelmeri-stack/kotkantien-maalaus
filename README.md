@@ -30,5 +30,5 @@ Kuvitteellisen maalaus- ja tapetointiyrityksen www-sivusto, tehty koulun näytt�
 Kaikki sivuston kuvat ovat Pixabay-palvelusta (pixabay.com), ja niitä saa käyttää vapaasti Pixabayn lisenssin mukaisesti.
 
 ## Julkaisu
-
-Sivusto on nähtävissä osoitteessa: (lisää linkki julkaisun jälkeen)
+   
+Sivusto on nähtävissä osoitteessa: https://geronimo.okol.org/~simvel/
